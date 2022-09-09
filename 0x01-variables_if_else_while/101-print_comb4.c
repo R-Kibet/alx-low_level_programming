@@ -18,8 +18,6 @@ int main(void)
 			{
 				if (i != j && i != k &&  j != k && i < j && j < k)
 				{
-					
-				
 					putchar(i);
 					putchar(j);
 					putchar(k);
