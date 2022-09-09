@@ -16,23 +16,24 @@ int main(void)
 		{
 			for (k = 48 ; k < 58 ; k++)
 			{
-				if (i == j || j == k || i == k)
+				if (i != j && i != k &&  j != k && i < j && j < k)
 				{
-					continue;
-				}
-				putchar(i);
-				putchar(j);
-				putchar(k);
+					
+				
+					putchar(i);
+					putchar(j);
+					putchar(k);
 
-				if (i == 55 && j == 56 && k == 57)
-				{
-					break;
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
+					if (i == 55 && j == 56 && k == 57)
+					{
+						break;
+					}
+					else
+					{
+						putchar(',');
+						putchar(' ');
+					}
+					}
 			}
 		}
 	}
