@@ -8,20 +8,18 @@
 
 int main(void)
 {
-	long i, j, k, l, m, n;
+	long i, k, l, m, n;
 
-	j = 50;
-	k = 1;
-	l = 2;
+	k = 0;
+	l = 1;
 	n = 0;
 
-	for (i = 0 ; i < j ; i++)
+	for (i = 0 ; i < 50 ; i++)
 	{
 		m = k + l;
-		j = k;
-		k = m;
-
-		if ((m % 2 == 0) && (m < 4000000))
+		k = l;
+		l = m;
+		if (m % 2 == 0 && m < 4000000)
 		{
 			n += m;
 		}
