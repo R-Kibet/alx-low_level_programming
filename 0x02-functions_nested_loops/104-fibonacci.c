@@ -10,7 +10,7 @@ int main(void)
 {
 	long i, j, k, l, n;
 
-	n = 98;
+	n = 91;
 	j = 1;
 	k = 1;
 
