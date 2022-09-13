@@ -8,21 +8,21 @@
 
 int main(void)
 {
-	int i, j, k, l, n;
+	long i, j, k, l, n;
 
 	n = 98;
-	j = 0;
+	j = 1;
 	k = 1;
 
 	for (i = 1 ; i <= n ; i++)
 	{
 		if (i == 98)
 		{
-			printf("%d, ", k);
+			printf("%lu, ", k);
 		}
 		else
 		{
-			printf("%d, ", k);
+			printf("%lu, ", k);
 			l = j + k;
 			j = k;
 			k = l;
