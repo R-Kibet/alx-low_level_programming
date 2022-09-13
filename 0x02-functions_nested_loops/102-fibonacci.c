@@ -28,7 +28,7 @@ int main(void)
 		else
 		{
 			printf("%lu, ", k);
-			m = k + l ;
+			m = k + l;
 			k = l;
 			l = m;
 		}
