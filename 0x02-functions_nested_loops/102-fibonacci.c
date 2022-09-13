@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 /**
  * main - Entry point
  *
@@ -8,7 +9,7 @@
 
 int main(void)
 {
-	int i, j, k, l, m;
+	long i, j, k, l, m;
 	/**
 	 * k - first
 	 * l - secnd
@@ -20,14 +21,14 @@ int main(void)
 
 	for (i = 0 ; i < j ; i++)
 	{
-		if (1 == 49)
+		if (i == 49)
 		{
-			printf("%d", k);
+			printf("%lu", k);
 		}
 		else
 		{
-			printf("%d, ", k);
-			m = k + l;
+			printf("%lu, ", k);
+			m = k + l ;
 			k = l;
 			l = m;
 		}
