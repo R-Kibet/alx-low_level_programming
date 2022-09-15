@@ -12,25 +12,21 @@ int main(void)
 
 	for (i = 1 ; i <= 100 ; i++)
 	{
-		if (i % 3 == 0)
+		if (i % 15 == 0)
 		{
-			printf("Fizz");
-			printf(" ");
+			printf("FizzBuzz ");
 		}
 		else if (i % 5 == 0)
 		{
-			printf("Buzz");
-			printf(" ");
+			printf("Buzz ");
 		}
-		else if (i % 15 == 0)
+		else if (i % 3 == 0)
 		{
-			printf("FizzBuzz");
-			printf(" ");
+			printf("Fizz ");
 		}
 		else
 		{
-			printf("%d", i);
-			printf(" ");
+			printf("%d ", i);
 		}
 	}
 	printf("\n");
