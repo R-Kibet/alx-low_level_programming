@@ -3,35 +3,31 @@
 #include <stdbool.h>
 
 /**
+ * cap_string - Entry point of program
  *
- * cap_string -Entry point of program
+ * @a: character
  *
- * @str: character
- *
- * Retunr: succces
+ * Return: succces
  */
-char *cap_string(char *str)
-{	
+char *cap_string(char *a)
+{
 	int i = 0;
 
-	bool start = true;
-
-	while (str[i])
+	while (a[i] != '\0')
 	{
-		if (start && isalpha(str[i]))
+		if (a[0] >= 'a' && a[0] <= 'z')
 		{
-			str[i] = toupper(str[i]);
-			start = false;
+			a[0] = a[0] - 32;
 		}
-	       	else
+		if (a[i] == ' ' || a[i] == '.' || a[i] == '\t' || a[i] == '\n' || a[i] == ','
+			|| a[i] == ';' || a[i] == '!' || a[i] == '?')
 		{
-			str[i] = tolower(str[i]);
-			if (str[i] == '.' || str[i] == '?' || str[i] == '!' || str[i] == ' ')
+			if (a[i + 1] >= 'a' && a[i + 1] <= 'z')
 			{
-				start = true;
+				a[i + 1] = a[i + 1] - 32;
 			}
 		}
 		i++;
 	}
-	return str;
+	return (a);
 }
