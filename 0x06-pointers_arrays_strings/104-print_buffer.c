@@ -4,7 +4,7 @@
 /**
  * print_buffer - Entry of program
  * @b: buffer.
- * @size: size 
+ * @size: size
  */
 void print_buffer(char *b, int size)
 {
