@@ -7,7 +7,7 @@
  * @n1: string
  * @n2: secnd string
  * @r: third string
- *@size_r: integer
+ * @size_r: integer
  *
  * Return: succcess
  */
