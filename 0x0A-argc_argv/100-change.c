@@ -1,16 +1,25 @@
 #include "main.h"
 
 /**
- * cal_cents - calculates and return cents
- * @n: input
- * Return: change
+ * main - prints the minimum number of
+ * coins to make change for an amount of money
+ * @argc: amount of arguement
+ * @argv: an array of inputs from argc
+ *
+ * Return: 0 for success
  */
 
-int cal_cents(int n)
+int main(int argc, char *argv[])
 {
-	int coins = 0;
+	int n, j = 0;
 
-	while (n)
+	if (argc == 1 || argc > 2)
+	{
+		return (printf("Error\n"), 1);
+	}
+
+	n = atoi(argv[1]);
+	while (n > 0)
 	{
 		if (n >= 25)
 			n -= 25;
@@ -22,33 +31,8 @@ int cal_cents(int n)
 			n -= 2;
 		else if (n >= 1)
 			n -= 1;
-		coins++;
+		j += 1;
 	}
-	return (coins);
-}
-
-/**
- * main - prints the minimum number of
- * coins to make change for an amount of money
- * @argc: amount of arguement
- * @argv: an array of inputs from argc
- *
- * Return: 0 for success
- */
-
-int main(int argc, char *argv[])
-{
-	int n;
-
-	if (argc == 1 || argc > 2)
-	{
-		return (printf("Error\n"), 1);
-	}
-	n = atoi(argv[1]);
-	if (n < 0)
-	{
-		return (printf("Error\n"), 1);
-	}
-	printf("%d\n", cal_cents(n));
+	printf("%d\n", j);
 	return (0);
 }
