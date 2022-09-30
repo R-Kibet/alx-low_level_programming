@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 {
 	int n;
 
-	if (argc != 2)
+	if (argc == 1 || argc > 2)
 	{
 		return (printf("Error\n"), 1);
 	}
