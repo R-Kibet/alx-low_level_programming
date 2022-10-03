@@ -33,6 +33,7 @@ char *argstostr(int ac, char **av)
 
 	if (ptr == NULL)
 	{
+		free(ptr);
 		return (NULL);
 	}
 	for (i = j = k = 0; k < c; j++, k++)
