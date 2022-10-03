@@ -26,5 +26,6 @@ char *_strdup(char *str)
 		ptr[i] = str[i];
 		j++;
 	}
+	ptr[j] = '\0';
 	return (ptr);
 }
