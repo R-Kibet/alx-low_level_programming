@@ -1,15 +1,20 @@
-SECTION .data
-msg:	db "Hello, Holberton", 0
-fmt:	db "%s", 10, 0
+;TEXT SECTION
 
-	SECTION .text
-	extern printf
+SECTION .text
 	global main
+	extern printf
 main:
-	mov esi, msg
-	mov edi, fmt
-	mov eax, 0
-	call printf
+	mov edi, len	;count
+	mov esi, msg	;*buf
+	mov eax, 0	;system call (sys_write)
+	call printf	;call print
 
-	mov eax, 0
-	ret
+	mov eax, 0	;system call (sys_exit)
+	ret     	;interupt
+
+;DATA SECTION
+
+SECTION .data
+	msg: db "Hello, Holberton", 0 		;u can also use 10
+	len: db "%s", 0xa, 0			;message length
+
