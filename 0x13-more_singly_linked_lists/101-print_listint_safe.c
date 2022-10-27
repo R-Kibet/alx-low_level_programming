@@ -26,7 +26,7 @@ void free_l(listp_t **head)
 /**
  * print_listint_safe - prints a linked list
  * @head: pointer to 1st node
- * Returns: number of nodes
+ * Return: number of nodes
  */
 
 size_t print_listint_safe(const listint_t *head)
