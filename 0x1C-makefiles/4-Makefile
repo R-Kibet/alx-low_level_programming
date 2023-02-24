@@ -9,12 +9,11 @@ all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean :
-	$(RM) $(NAME) '*~'
+	$(RM) *~ $(NAME)
 
-oclean:
+oclean :
 	$(RM) $(OBJ)
-	
-fclean: 
-	oclean clean	
-re: 
-	oclean all
+
+fclean : clean oclean
+
+re : oclean all
