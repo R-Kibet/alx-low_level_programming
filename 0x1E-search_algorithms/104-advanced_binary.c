@@ -1,6 +1,6 @@
 #include "search_algos.h"
 
-nt rec_search(int *array, size_t size, int value);
+int rec_search(int *array, size_t size, int value);
 
 /**
  * rec_search - searches for a value in an array of
